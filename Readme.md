@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>ReadMe</title>
-<style>
-	body{
-		text-align: center;
-	}
-	img{
-		width: 900px;
-		height: 550px;
-	}
-</style>
+
 </head>
 <body>
 	<div>
