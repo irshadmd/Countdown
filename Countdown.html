@@ -1,0 +1,63 @@
+<!DOCTYPE HTML> 
+<html> 
+	<head>
+	<title>Countdown</title> 
+	<style> 
+		.box{
+			text-align: center;
+			font-size: 30px;
+		}
+		p { 
+			color: red;
+			text-align: center; 
+			font-size: 60px;
+			border:2px solid black;
+			border-radius: 10px;
+			padding: 5%; 
+		} 
+	</style> 
+	</head> 
+	<body> 
+		<div class="box">
+			<h1>Countdown</h1>
+			<p id="demo"></p>	
+		</div>
+		 
+		<script> 
+			var deadline = new Date("2021-05-07 15:37:25").getTime(); 
+
+			var x = setInterval(function() { 
+			var now = new Date().getTime(); 
+			console.log(deadline,now)
+			var t = deadline - now; 
+			var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+			var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+			var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+			var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+			document.getElementById("demo").innerHTML = days + "d " 
+			+ hours + "h " + minutes + "m " + seconds + "s "; 
+				if (t < 0) { 
+					clearInterval(x); 
+					document.getElementById("demo").innerHTML = "EXPIRED Change date"; 
+				} 
+			}, 1000); 
+
+
+
+			//adding hours and minutes
+			/*<?php
+
+				$date = new DateTime('2000-01-01 22:25:25');
+				//$date->add(new DateInterval('P7Y5M4DT4H3M2S'));
+				$date->add(new DateInterval('P4DT4H'));
+				echo $date->format('Y-m-d H:i:s') . "\n";
+			?>*/
+
+		//   var deadline = new Date(approved_datetime);
+		    //   console.log(typeof(deadline))
+		    //   deadline.setHours(deadline.getHours() + 4); //add hours
+		    //   deadline.setDate(deadline.getDate() + 4)  //add days
+		</script> 
+
+	</body> 
+</html> 
