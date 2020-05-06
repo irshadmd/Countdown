@@ -4,7 +4,6 @@
 	<div>
 		<h1>Simple Countdown</h1>
 		<img src="SimpleCountdown.png" width="70%" height="500px">
-		<iframe src="Countdown.html"></iframe>
 	</div>
 	<div>
 		<h1>Multiple Countdowns in single page </h1>
